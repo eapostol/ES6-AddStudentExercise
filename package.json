@@ -1,0 +1,55 @@
+{
+  "name": "es6-addstudentexercise",
+  "version": "1.0.1",
+  "description": "Red Academy - Solution for ES6 / ECMAScript 2015 Add Student Exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eapostol/ES6-AddStudentExercise.git"
+  },
+  "keywords": [
+    "ES6",
+    "ECMAScript",
+    "2015",
+    "JavaScript",
+    "browserify",
+    "typescript"
+  ],
+  "author": "Edward J. Apostol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eapostol/ES6-AddStudentExercise/issues"
+  },
+  "homepage": "https://github.com/eapostol/ES6-AddStudentExercise#readme",
+  "devDependencies": {
+    "@segment/to-iso-string": "^1.0.1",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "css-loader": "^0.24.0",
+    "file-loader": "^0.9.0",
+    "graceful-fs": "^4.1.6",
+    "lodash": "^4.15.0",
+    "minimatch": "^3.0.3",
+    "mocha": "^3.0.2",
+    "node-libs-browser": "^1.0.0",
+    "node-sass": "^3.8.0",
+    "pug": "^2.0.0-beta6",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^4.0.0",
+    "sinon": "^1.17.5",
+    "style-loader": "^0.13.1",
+    "tough-cookie": "^2.3.1",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.3",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
+  },
+  "dependencies": {
+    "source-map-support": "^0.4.2"
+  }
+}
