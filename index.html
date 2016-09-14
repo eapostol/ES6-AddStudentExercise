@@ -6,13 +6,21 @@
 
 </head>
 <body>
+    <h2>Add Student</h2>
     <form id="addStudentForm">
+        <input type="text" id="id" name="id" value="0"><br>
         <input type="text" id="firstName" name="firstName" value="first-name"><br>
         <input type="text" id="lastName" name="lastName" value="last-name"><br>
         <input type="text" id="age" name="age" value="0"><br>
         <input type="text" id="occupation" name="occupation" value="unemployed"><br>
     </form>
     <input type="button" id="submit" value="submit"><br>
+    <br><br>
+    <h2>Search for Student by ID</h2>
+    <form id="searchStudentForm">
+        <input type="text" id="studentIDSearchField" name="studentIDSearchField" value="1">
+    </form>
+    <input type="button" id="searchSubmitBtn" name="searchSubmitBtn" value="search">
     <script src="src/index2.js"></script>
 </body>
 </html>
