@@ -33,7 +33,7 @@ let studentIDSearchField = document.getElementById("studentIDSearchField");
 let searchBtn = document.getElementById("searchSubmitBtn");
 
 let firstNameValue = "", lastNameValue = "", age = 0,
-    occupation = "nerf herder", id = "";
+    occupation = "nerf herder", id = "",searchFieldValue = "";
 
 let onSubmitForm = (e:Event) => {
     // <objectType>varName is an example of casting in Javascript/ ES6
@@ -51,11 +51,26 @@ let onSubmitForm = (e:Event) => {
     // add a new student to webdevclass
     courseB.addStudent(newStudent);
     console.log(courseB.studentClassList);
+    // update the ID field
+    let newID = parseInt ((<HTMLInputElement>idField).value) +1;
 
+    (<HTMLInputElement>idField).value = newID.toString();
 };
 
 let onSubmitSearchForm = (e:Event) => {
-
+    console.log("onSubmitSearchForm");
+    searchFieldValue = (<HTMLInputElement>studentIDSearchField).value;
+    let studentList = courseB.studentClassList;
+    if (searchFieldValue!="" || searchFieldValue!=null){
+        // loop through students array
+        for (let student of studentList){
+            let currentStudent:Student = student;
+            if (currentStudent.id == searchFieldValue){
+                console.log("found match : \n");
+                console.log(student);
+            }
+        }
+    }
 };
 
 submitBtn.addEventListener("click",onSubmitForm);
