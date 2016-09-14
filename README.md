@@ -25,7 +25,7 @@ Red Academy - Solution for ES6 / ECMAScript 2015 "Add Student" Exercise
 
     ```browserify nameoffile.js -o nameoffile02.js```
 
-10. reference the nameoffile02.js with a <script> tag in your html page
+10. reference the nameoffile02.js with a `<script>` tag in your html page
 11. browse to your web page.
 
 -Edward Apostol
