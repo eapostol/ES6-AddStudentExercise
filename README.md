@@ -9,16 +9,21 @@ Red Academy - Solution for ES6 / ECMAScript 2015 "Add Student" Exercise
 6. in terminal/command prompt, run `npm install`
 7. make sure browserify is installed for quick transpilation. To install
  browserify -
- 
-`npm install -g browserify`
+
+    ```
+    npm install -g browserify
+    ```
 
 8. use typescript compiler to compile your .ts files to .js files.
 
-`tsc nameoffile.ts`
+    ```
+    tsc nameoffile.ts
+    ```
+
 
 9. use browserify to transpile further for es5 browsers
 
-`browserify nameoffile.js -o nameoffile02.js`
+    ```browserify nameoffile.js -o nameoffile02.js```
 
 10. reference the nameoffile02.js with a <script> tag in your html page
 11. browse to your web page.
