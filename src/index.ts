@@ -31,9 +31,11 @@ let submitBtn = document.getElementById("submit");
 let idField = document.getElementById("id");
 let studentIDSearchField = document.getElementById("studentIDSearchField");
 let searchBtn = document.getElementById("searchSubmitBtn");
+let studentIDToRemoveField = document.getElementById("studentIDToRemoveField");
+let removeStudentBtn = document.getElementById("removeStudentBtn");
 
 let firstNameValue = "", lastNameValue = "", age = 0,
-    occupation = "nerf herder", id = "",searchFieldValue = "";
+    occupation = "nerf herder", id = "",searchFieldValue = "",removeStudentFieldValue="";
 
 let onSubmitForm = (e:Event) => {
     // <objectType>varName is an example of casting in Javascript/ ES6
@@ -49,7 +51,9 @@ let onSubmitForm = (e:Event) => {
     // create a new student
     let newStudent = new Student(firstNameValue,lastNameValue,age,occupation,id);
     // add a new student to webdevclass
+    newStudent.registeredClass = courseB;
     courseB.addStudent(newStudent);
+
     console.log(courseB.studentClassList);
     // update the ID field
     let newID = parseInt ((<HTMLInputElement>idField).value) +1;
@@ -73,7 +77,29 @@ let onSubmitSearchForm = (e:Event) => {
     }
 };
 
+let onSubmitRemoveForm = (e:Event) => {
+    removeStudentFieldValue = (<HTMLInputElement>studentIDToRemoveField).value;
+    let studentList:Array<Student> = courseB.studentClassList;
+    if (removeStudentFieldValue!="" || removeStudentFieldValue!=null){
+        // loop through students array
+        for (let i=0; i<=studentList.length-1; i++){
+            let currentStudent:Student = <Student>studentList[i];
+            if (currentStudent.id == removeStudentFieldValue){
+                console.log("found a student I can delete");
+                console.log(currentStudent);
+                // delete the student
+                let removedItem:Array<Student> = studentList.splice(i,1);
+                console.log("deleted item: \n " + removedItem);
+                break;
+            }
+            console.log("searching...");
+        }
+        console.log("students left: \n" + studentList);
+    }
+};
+
 submitBtn.addEventListener("click",onSubmitForm);
 searchBtn.addEventListener("click",onSubmitSearchForm);
+removeStudentBtn.addEventListener("click",onSubmitRemoveForm);
 
 schoolB.classes.push(courseB);
