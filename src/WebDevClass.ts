@@ -9,8 +9,7 @@ export class WebDevClass extends BaseClass{
     studentClassList:Array<Student>;
 
 
-    constructor(public crsName:String, public crsType:String,
-                public crsCode:String, crsDesc: String )
+    constructor( crsName:String,  crsType:String, crsCode:String, crsDesc: String )
     {
         super(crsName,crsType,crsCode,crsDesc);
         this.isCourseActive = false;

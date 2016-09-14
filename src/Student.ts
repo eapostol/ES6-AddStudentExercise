@@ -9,9 +9,9 @@ export class Student extends Person {
     registeredClass : BaseClass;
     id              : String;
 
-    constructor(public fName:String, public lName:String,
-                public ageInYears:Number, public occ:String,
-                public studentID:String){
+    constructor(fName:String, lName:String, ageInYears:Number, occ:String,
+                studentID:String)
+    {
         super(fName,lName,ageInYears,occ);
         this.registeredClass = null;
         this.id = studentID;

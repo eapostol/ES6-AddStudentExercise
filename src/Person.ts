@@ -13,8 +13,7 @@ export class Person implements Being {
     // goToSleep : Function;
     // eatFood   : Function;
 
-    constructor(public fName:String, public lName:String,
-    public ageYear:Number, public occ:String){
+    constructor(fName:String, lName:String, ageYear:Number, occ:String){
         this.firstName = fName;
         this.lastName = lName;
         this.age = ageYear;
