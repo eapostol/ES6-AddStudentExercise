@@ -14,10 +14,10 @@ export class Person implements Being {
     // eatFood   : Function;
 
     constructor(public fName:String, public lName:String,
-    public dateOfBirth:Number, public occ:String){
+    public ageYear:Number, public occ:String){
         this.firstName = fName;
         this.lastName = lName;
-        this.age = dateOfBirth;
+        this.age = ageYear;
         this.occupation = occ;
     }
 

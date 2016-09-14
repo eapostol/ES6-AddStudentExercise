@@ -19,25 +19,46 @@ export default class RedAcademy {
 
 let schoolB = new RedAcademy();
 let courseB = new WebDevClass("Web Developer","Programming","001","Web Development Program");
-schoolB.classes.push(courseB);
+
 
 // addForm class
 let theForm = document.getElementById("addStudentForm");
 let fNameField = document.getElementById("firstName");
 let lNameField = document.getElementById("lastName");
+let ageField = document.getElementById("age");
+let occupationField = document.getElementById("occupation");
 let submitBtn = document.getElementById("submit");
+let idField = document.getElementById("id");
+let studentIDSearchField = document.getElementById("studentIDSearchField");
+let searchBtn = document.getElementById("searchSubmitBtn");
+
+let firstNameValue = "", lastNameValue = "", age = 0,
+    occupation = "nerf herder", id = "";
 
 let onSubmitForm = (e:Event) => {
-    fNameField = document.getElementById("firstName");
-    console.log("e = " + e);
-    console.log("first Name = " +
-        fNameField.getAttribute("value"));
+    // <objectType>varName is an example of casting in Javascript/ ES6
+
+    // console.log(fNameField.value);
+    firstNameValue = (<HTMLInputElement>fNameField).value;
+    console.log(firstNameValue);
+    lastNameValue = (<HTMLInputElement>lNameField).value;
+    age = parseInt( (<HTMLInputElement>ageField).value );
+    occupation = (<HTMLInputElement>occupationField).value;
+    id =  (<HTMLInputElement>idField).value ;
+
+    // create a new student
+    let newStudent = new Student(firstNameValue,lastNameValue,age,occupation,id);
+    // add a new student to webdevclass
+    courseB.addStudent(newStudent);
+    console.log(courseB.studentClassList);
+
+};
+
+let onSubmitSearchForm = (e:Event) => {
 
 };
 
 submitBtn.addEventListener("click",onSubmitForm);
+searchBtn.addEventListener("click",onSubmitSearchForm);
 
-
-
-
-
+schoolB.classes.push(courseB);

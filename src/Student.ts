@@ -10,9 +10,10 @@ export class Student extends Person {
     id              : String;
 
     constructor(public fName:String, public lName:String,
-                public dateOfBirth:Number, public occ:String){
-        super(fName,lName,dateOfBirth,occ);
+                public ageInYears:Number, public occ:String,
+                public studentID:String){
+        super(fName,lName,ageInYears,occ);
         this.registeredClass = null;
-        this.id = "";
+        this.id = studentID;
     }
 }
